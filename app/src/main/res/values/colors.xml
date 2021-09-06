@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="backgroundColor">#E8E8E0</color>
+    <color name="backgroundColorPress">#DBDBD3</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorHijau">#629c44</color>
+    <color name="colorBiru">#2196f3</color>
+    <color name="colorAbuAbu">#cccccc</color>
+    <color name="colorAbuAbuGelap">#7c7c7c</color>
+    <color name="colorMerah">#FF0000</color>
+</resources>
