@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.huda.booking.dashboard.DashboardPemilikActivity
 import com.huda.booking.model.LoginResponse
 import com.huda.booking.rest.RetrofitClient
 import kotlinx.android.synthetic.main.activity_login.*
@@ -38,7 +39,13 @@ class LoginActivity : AppCompatActivity() {
                         if (status == 1){
                             val data = response.body().data
                             for (item in data!!){
-                                Toast.makeText(applicationContext, "Berhasil Login dengan rule ${item?.ruleAkun}", Toast.LENGTH_SHORT).show()
+                                if (item!!.ruleAkun == "pemilik"){
+                                    Toast.makeText(applicationContext, "Berhasil Login", Toast.LENGTH_SHORT).show()
+                                    val intent = Intent(applicationContext, DashboardPemilikActivity::class.java)
+                                    startActivity(intent)
+                                }else{
+                                    Toast.makeText(applicationContext, "Dashboard Umum", Toast.LENGTH_SHORT).show()
+                                }
                             }
                         }else{
                             Toast.makeText(applicationContext, "Gagal Login", Toast.LENGTH_SHORT).show()

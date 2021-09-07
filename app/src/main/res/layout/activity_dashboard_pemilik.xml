@@ -58,7 +58,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_presensi"
+                        android:id="@+id/cv_menu_booking"
                         app:cardCornerRadius="10dp"
                         android:layout_margin="11dp"
                         android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:padding="10dp"
-                                android:text="Fingerprint"
+                                android:text="Data Booking"
                                 android:textColor="#fc035a"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -101,7 +101,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_fingerprint"
+                        android:id="@+id/cv_menu_kamar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:cardCornerRadius="10dp"
@@ -125,7 +125,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:padding="10dp"
-                                android:text="Data Presensi"
+                                android:text="Data Kamar"
                                 android:textColor="#fc035a"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
