@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iv_foto_list_pengguna"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/user"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_list_pengguna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@id/iv_foto_list_pengguna"
+            android:layout_toRightOf="@id/iv_foto_list_pengguna"
+            android:textColor="#fc035a"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Khoirul Huda" />
+
+        <TextView
+            android:id="@+id/tv_list_rule_pengguna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/tv_list_pengguna"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toEndOf="@id/iv_foto_list_pengguna"
+            android:maxLines="3"
+            android:textColor="#4A9586"
+            tools:text="Pemilik"
+            tools:ignore="RtlCompat" />
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="35dp"
+            android:layout_below="@id/tv_list_rule_pengguna"
+            android:layout_toRightOf="@+id/iv_foto_list_pengguna"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_edit_pengguna"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_hapus_pengguna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorMerah"
+                android:text="HAPUS"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@id/layout_button"
+            android:textColor="#fc035a"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/alamat" />
+        <TextView
+            android:id="@+id/tv_list_alamat_pengguna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:maxLines="3"
+            android:textColor="#4A9586"
+            tools:text="Alamat"
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/tv_list_nohp_pengguna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_list_alamat_pengguna"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="3"
+            android:textColor="#4A9586"
+            tools:text="No Hp"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

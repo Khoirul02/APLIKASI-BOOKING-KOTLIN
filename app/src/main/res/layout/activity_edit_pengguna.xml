@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegistrasiActivity">
+    tools:context=".activity.EditPenggunaActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -77,30 +77,30 @@
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="200dp"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt_password_pengguna"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Password"
-                    android:inputType="textVisiblePassword" />
-            </com.google.android.material.textfield.TextInputLayout>
-            <Button
-                android:id="@+id/btn_pilih"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="HIDE"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_password_pengguna"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textVisiblePassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/btn_pilih"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="HIDE"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/div_jk"
@@ -120,7 +120,7 @@
                 <Spinner
                     android:id="@+id/spn_jk_pengguna"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></Spinner>
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -188,15 +188,36 @@
                     android:text="Pilih Foto"
                     android:textColor="@android:color/white" />
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/div_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_rule_pengguna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rule Pengguna"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spn_rule_pengguna"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/btn_kirim_data_penggguna"
+        android:id="@+id/btn_edit_data_penggguna"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kirim"
+        android:text="Edit"
         android:textColor="@android:color/white"
         android:textSize="20dp" />
 </LinearLayout>

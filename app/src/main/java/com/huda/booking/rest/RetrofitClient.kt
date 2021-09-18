@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.100.223/BACKEND-DIVA-KOST/"
+    private const val BASE_URL = "http://192.168.100.239/BACKEND-DIVA-KOST/"
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->

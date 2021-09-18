@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".dashboard.DashboardPemilikActivity">
+    tools:context=".dashboard.DashboardUmumActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -134,7 +134,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_menu_pengguna"
+                        android:id="@+id/cv_menu_faq"
                         app:cardCornerRadius="10dp"
                         android:layout_margin="11dp"
                         android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:padding="10dp"
-                                android:text="Data Pengguna"
+                                android:text="FAQ"
                                 android:textColor="#fc035a"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />

@@ -19,7 +19,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".RegistrasiActivity"></activity>
+        <activity android:name=".activity.BookingActivity"></activity>
+        <activity android:name=".dashboard.DashboardUmumActivity" />
+        <activity android:name=".activity.EditPenggunaActivity" />
+        <activity android:name=".activity.PenggunaActivity" />
+        <activity android:name=".activity.EditKamarActivity" />
+        <activity android:name=".activity.KamarActivity" />
+        <activity android:name=".RegistrasiActivity" />
         <activity android:name=".dashboard.DashboardPemilikActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
