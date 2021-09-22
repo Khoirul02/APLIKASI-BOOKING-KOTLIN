@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.huda.booking">
+    package="com.aplikasi.booking">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -19,18 +19,18 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".activity.FaqActivity"></activity>
-        <activity android:name=".activity.DaftarBookingPenggunaActivity" />
-        <activity android:name=".activity.BookingPenggunaActivity" />
-        <activity android:name=".activity.BookingActivity" />
-        <activity android:name=".dashboard.DashboardUmumActivity" />
-        <activity android:name=".activity.EditPenggunaActivity" />
-        <activity android:name=".activity.PenggunaActivity" />
-        <activity android:name=".activity.EditKamarActivity" />
-        <activity android:name=".activity.KamarActivity" />
-        <activity android:name=".RegistrasiActivity" />
-        <activity android:name=".dashboard.DashboardPemilikActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name="com.aplikasi.booking.activity.FaqActivity"></activity>
+        <activity android:name="com.aplikasi.booking.activity.DaftarBookingPenggunaActivity" />
+        <activity android:name="com.aplikasi.booking.activity.BookingPenggunaActivity" />
+        <activity android:name="com.aplikasi.booking.activity.BookingActivity" />
+        <activity android:name="com.aplikasi.booking.dashboard.DashboardUmumActivity" />
+        <activity android:name="com.aplikasi.booking.activity.EditPenggunaActivity" />
+        <activity android:name="com.aplikasi.booking.activity.PenggunaActivity" />
+        <activity android:name="com.aplikasi.booking.activity.EditKamarActivity" />
+        <activity android:name="com.aplikasi.booking.activity.KamarActivity" />
+        <activity android:name="com.aplikasi.booking.RegistrasiActivity" />
+        <activity android:name="com.aplikasi.booking.dashboard.DashboardPemilikActivity" />
+        <activity android:name="com.aplikasi.booking.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
