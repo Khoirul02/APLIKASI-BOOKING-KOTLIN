@@ -21,6 +21,7 @@ import androidx.core.app.ActivityCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.huda.booking.R
+import com.huda.booking.helper.Config
 import com.huda.booking.model.DefaultResponse
 import com.huda.booking.model.ResultResponse
 import com.huda.booking.rest.RetrofitClient
@@ -64,7 +65,7 @@ class EditPenggunaActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
         edt_username_pengguna.setText(intent.getStringExtra("username"))
         edt_alamat_pengguna.setText(intent.getStringExtra("alamat_pengguna"))
         edt_nohp_pengguna.setText(intent.getStringExtra("nohp_pengguna"))
-        Glide.with(this).load("http://192.168.100.239/BACKEND-DIVA-KOST/images/"+ intent.getStringExtra("foto_pengguna"))
+        Glide.with(this).load(Config.BASE_URL_PHOTO+intent.getStringExtra("foto_pengguna"))
             .apply(RequestOptions().override(300, 300)).into(iv_foto_pengguna)
         btn_pilih_foto_pengguna.setOnClickListener {
             pickImage()

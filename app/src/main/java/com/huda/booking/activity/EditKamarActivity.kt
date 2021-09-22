@@ -20,6 +20,7 @@ import androidx.core.app.ActivityCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.huda.booking.R
+import com.huda.booking.helper.Config
 import com.huda.booking.model.DefaultResponse
 import com.huda.booking.model.ResultResponse
 import com.huda.booking.rest.RetrofitClient
@@ -53,7 +54,7 @@ class EditKamarActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
         edt_nama_kamar.setText (intent.getStringExtra("nama_kamar"))
         edt_fasilitas_kamar.setText (intent.getStringExtra("fasilitas_kamar"))
         edt_harga_kamar.setText (intent.getStringExtra("harga_kamar"))
-        Glide.with(this).load("http://192.168.100.239/BACKEND-DIVA-KOST/images/"+ intent.getStringExtra("foto_kamar"))
+        Glide.with(this).load(Config.BASE_URL_PHOTO+intent.getStringExtra("foto_kamar"))
             .apply(RequestOptions().override(300, 300)).into(iv_foto_kamar)
         btn_pilih_foto_kamar.setOnClickListener {
             pickImage()
@@ -72,8 +73,9 @@ class EditKamarActivity : AppCompatActivity(), AdapterView.OnItemSelectedListene
                         ) {
                             if (response!!.isSuccessful){
                                 if (response.body().status == 1){
-                                    val intent = Intent(this@EditKamarActivity, KamarActivity::class.java)
-                                    startActivity(intent)
+                                    edt_nama_kamar.setText("")
+                                    edt_fasilitas_kamar.setText("")
+                                    edt_harga_kamar.setText("")
                                     Toast.makeText(this@EditKamarActivity,"Berhasil Edit Data Kamar", Toast.LENGTH_LONG).show()
                                 }else{
                                     Toast.makeText(this@EditKamarActivity,"Gagal Edit Data Kamar", Toast.LENGTH_LONG).show()

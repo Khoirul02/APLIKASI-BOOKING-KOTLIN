@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         supportActionBar!!.hide()
-        sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences(Config.SHARED_PRED_NAME, Context.MODE_PRIVATE)
         btnLogin.setOnClickListener {
             val user: String = edtUsername.text.toString()
             val pass: String = edtPassword.text.toString()

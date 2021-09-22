@@ -16,6 +16,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.huda.booking.R
 import com.huda.booking.activity.EditPenggunaActivity
 import com.huda.booking.activity.PenggunaActivity
+import com.huda.booking.helper.Config
 import com.huda.booking.model.DataPengguna
 import com.huda.booking.model.DefaultResponse
 import com.huda.booking.rest.RetrofitClient
@@ -32,7 +33,7 @@ class PenggunaAdapter(val result : ArrayList<DataPengguna>) : RecyclerView.Adapt
     @SuppressLint("CheckResult", "SetTextI18n")
     override fun onBindViewHolder(holder: PenggunaAdapter.ViewHolder, position: Int) {
         val data = result[position]
-        Glide.with(holder.itemView).load("http://192.168.100.239/BACKEND-DIVA-KOST/images/"+data.fotoAkun)
+        Glide.with(holder.itemView).load(Config.BASE_URL_PHOTO+data.fotoAkun)
             .apply(RequestOptions().override(300,300)).into(holder.fotoPengguna)
         holder.namaPengguna.text = data.namaAkun
         holder.rulePengguna.text = "Status : "+data.ruleAkun
@@ -79,22 +80,13 @@ class PenggunaAdapter(val result : ArrayList<DataPengguna>) : RecyclerView.Adapt
         return result.size
     }
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val fotoPengguna : ImageView
-        val namaPengguna : TextView
-        val rulePengguna : TextView
-        val alamatPengguna : TextView
-        val btnEditPengguna : Button
-        val btnHapusPengguna : Button
-        val nohpPengguna : TextView
-        init {
-            fotoPengguna = itemView.findViewById(R.id.iv_foto_list_pengguna)
-            namaPengguna = itemView.findViewById(R.id.tv_list_pengguna)
-            rulePengguna = itemView.findViewById(R.id.tv_list_rule_pengguna)
-            alamatPengguna = itemView.findViewById(R.id.tv_list_alamat_pengguna)
-            btnEditPengguna = itemView.findViewById(R.id.btn_edit_pengguna)
-            btnHapusPengguna = itemView.findViewById(R.id.btn_hapus_pengguna)
-            nohpPengguna = itemView.findViewById(R.id.tv_list_nohp_pengguna)
-        }
+        val fotoPengguna : ImageView = itemView.findViewById(R.id.iv_foto_list_pengguna)
+        val namaPengguna : TextView = itemView.findViewById(R.id.tv_list_pengguna)
+        val rulePengguna : TextView = itemView.findViewById(R.id.tv_list_rule_pengguna)
+        val alamatPengguna : TextView = itemView.findViewById(R.id.tv_list_alamat_pengguna)
+        val btnEditPengguna : Button = itemView.findViewById(R.id.btn_edit_pengguna)
+        val btnHapusPengguna : Button = itemView.findViewById(R.id.btn_hapus_pengguna)
+        val nohpPengguna : TextView = itemView.findViewById(R.id.tv_list_nohp_pengguna)
     }
     fun setData(data: List<DataPengguna>){
         result.clear()

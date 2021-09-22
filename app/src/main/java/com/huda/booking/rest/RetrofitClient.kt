@@ -1,11 +1,12 @@
 package com.huda.booking.rest
 
+import com.huda.booking.helper.Config
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.100.239/BACKEND-DIVA-KOST/"
+    private const val BASE_URL = Config.BASE_URL
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->

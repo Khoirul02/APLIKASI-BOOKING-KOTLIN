@@ -16,6 +16,20 @@ interface Api {
 
     @FormUrlEncoded
     @POST("restapi_booking_kost.php")
+    fun insertBooking(
+        @Field("id_akun") id_akun:String,
+        @Field("id_kamar") id_kamar:String,
+        @Field("tanggal_mulai_kost_booking") tanggal_mulai_kost_booking:String,
+        @Field("tanggal_keluar_kost_booking") tanggal_keluar_kost_booking:String,
+        @Field("lama_sewa_booking") lama_sewa_booking:String,
+        @Field("cara_bayar_booking") cara_bayar_booking: String,
+        @Field("bukti_pembayaran_booking") bukti_pembayaran_booking: String,
+        @Field("status_booking") status_booking: String,
+        @Query("function") function:String
+    ): Call<DefaultResponse>
+
+    @FormUrlEncoded
+    @POST("restapi_booking_kost.php")
     fun insertUser(
         @Field("nama_akun") nama_akun:String,
         @Field("tempat_lahir_akun") tempat_lahir_akun:String,
@@ -86,6 +100,28 @@ interface Api {
         @Query("function") function:String
     ): Call<DefaultResponse>
 
+    @FormUrlEncoded
+    @POST("restapi_booking_kost.php")
+    fun deleteBooking(
+        @Field("id_booking") id_booking:String,
+        @Query("function") function:String
+    ): Call<DefaultResponse>
+
+    @FormUrlEncoded
+    @POST("restapi_booking_kost.php")
+    fun verifBooking(
+        @Field("id_booking") id_booking:String,
+        @Field("status_booking") status_booking:String,
+        @Query("function") function:String
+    ): Call<DefaultResponse>
+
+    @FormUrlEncoded
+    @POST("restapi_booking_kost.php")
+    fun getBookingByIdUser(
+        @Field("id_akun") id_akun:String,
+        @Query("function") function:String
+    ): Call<BookingResponse>
+
     @Multipart
     @POST("images/upload.php")
     fun postImage(@Part image: MultipartBody.Part
@@ -95,6 +131,11 @@ interface Api {
     fun getKamar(
         @Query("function") function: String
     ): Call<KamarResponse>
+
+    @GET("restapi_booking_kost.php")
+    fun getBooking(
+        @Query("function") function: String
+    ): Call<BookingResponse>
 
     @GET("restapi_booking_kost.php")
     fun getUser(

@@ -24,7 +24,6 @@ import retrofit2.Response
 class KamarFragment : Fragment() {
 
     private lateinit var kamarAdapter : KamarAdapter
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -58,7 +57,7 @@ class KamarFragment : Fragment() {
                 }
 
                 override fun onFailure(call: Call<KamarResponse>?, t: Throwable?) {
-                    Toast.makeText(activity, "Response Gagal", Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity, "Data Kosong", Toast.LENGTH_LONG).show()
                 }
 
             })

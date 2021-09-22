@@ -60,7 +60,7 @@ class PenggunaFragment : Fragment() {
                 }
 
                 override fun onFailure(call: Call<PenggunaResponse>?, t: Throwable?) {
-                    Toast.makeText(activity, "Response Gagal", Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity, "Data Kosong", Toast.LENGTH_LONG).show()
                 }
 
             })

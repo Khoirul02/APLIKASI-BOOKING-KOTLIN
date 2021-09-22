@@ -17,7 +17,7 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/iv_foto_list_kamar"
+            android:id="@+id/iv_foto_list_booking"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginBottom="4dp"
@@ -26,47 +26,44 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/tv_list_kamar"
+            android:id="@+id/tv_list_booking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
             android:layout_marginLeft="17dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:layout_toEndOf="@id/iv_foto_list_kamar"
-            android:layout_toRightOf="@id/iv_foto_list_kamar"
+            android:layout_toEndOf="@id/iv_foto_list_booking"
+            android:layout_toRightOf="@id/iv_foto_list_booking"
             android:textColor="#fc035a"
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Kamar A" />
 
         <TextView
-            android:id="@+id/tv_list_kategori_kamar"
+            android:id="@+id/tv_list_kategori_booking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_below="@id/tv_list_kamar"
+            android:layout_below="@id/tv_list_booking"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_toEndOf="@id/iv_foto_list_kamar"
+            android:layout_toEndOf="@id/iv_foto_list_booking"
             android:maxLines="3"
             android:textColor="#4A9586"
-            tools:text="Kost Laki-laki"
+            tools:text="Cara Bayar : transfer"
             tools:ignore="RtlCompat" />
-
         <TextView
-            android:id="@+id/tv_list_harga_kamar"
+            android:id="@+id/tv_list_lama_sewa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_below="@id/tv_list_kategori_kamar"
+            android:layout_below="@id/tv_list_kategori_booking"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_toEndOf="@id/iv_foto_list_kamar"
-            android:maxLines="3"
-            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/iv_foto_list_booking"
             android:textColor="#4A9586"
-            tools:text="Kost Laki-laki"
+            tools:text="Lama : 2 Bln (Rp. 1000000)"
             tools:ignore="RtlCompat" />
         <LinearLayout
             android:id="@+id/layout_button"
@@ -75,21 +72,21 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="35dp"
-            android:layout_below="@id/tv_list_kategori_kamar"
-            android:layout_toRightOf="@+id/iv_foto_list_kamar"
+            android:layout_below="@id/tv_list_kategori_booking"
+            android:layout_toRightOf="@+id/iv_foto_list_booking"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_edit_kamar"
+                android:id="@+id/btn_verif_booking"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Edit"
+                android:text="VERIF"
                 android:textSize="12sp" />
 
             <Button
-                android:id="@+id/btn_hapus_kamar"
+                android:id="@+id/btn_hapus_booking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -99,23 +96,23 @@
                 android:textSize="12sp" />
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/layout_button_booking"
+            android:id="@+id/layout_button__hapus_booking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="35dp"
-            android:layout_below="@id/tv_list_kategori_kamar"
-            android:layout_toRightOf="@+id/iv_foto_list_kamar"
+            android:layout_below="@id/tv_list_kategori_booking"
+            android:layout_toRightOf="@+id/iv_foto_list_booking"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_booking_kamar"
+                android:id="@+id/btn_batal_booking_kamar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorBiru"
-                android:text="Booking"
+                android:text="Batal"
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -127,13 +124,13 @@
             android:layout_marginLeft="17dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/iv_foto_list_kamar"
+            android:layout_below="@id/iv_foto_list_booking"
             android:textColor="#fc035a"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:text="@string/deskripsi" />
         <TextView
-            android:id="@+id/tv_list_deskripsi_kamar"
+            android:id="@+id/tv_list_deskripsi_booking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_title"
@@ -144,16 +141,16 @@
             tools:text="Memiliki AC, TV, dan Internet (WIFI)"
             tools:ignore="RtlCompat" />
         <TextView
-            android:id="@+id/tv_list_status_kamar"
+            android:id="@+id/tv_list_status_booking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_list_deskripsi_kamar"
+            android:layout_below="@id/tv_list_deskripsi_booking"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="10dp"
             android:maxLines="3"
             android:textColor="#4A9586"
-            tools:text="Status : KOSONG"
+            tools:text="Status : Belum Verifikasi"
             tools:ignore="RtlCompat" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
