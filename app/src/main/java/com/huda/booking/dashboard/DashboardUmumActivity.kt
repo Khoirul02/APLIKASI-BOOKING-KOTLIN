@@ -12,6 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.huda.booking.LoginActivity
 import com.huda.booking.R
 import com.huda.booking.activity.BookingPenggunaActivity
+import com.huda.booking.activity.FaqActivity
 import com.huda.booking.helper.Config
 import com.huda.booking.helper.Config.FOTO_AKUN
 import com.huda.booking.helper.Config.NAMA_AKUN
@@ -31,6 +32,10 @@ class DashboardUmumActivity : AppCompatActivity() {
             .apply(RequestOptions().override(300, 300)).into(ivImageProfile)
         cv_menu_booking.setOnClickListener {
             val intent = Intent(this, BookingPenggunaActivity::class.java)
+            startActivity(intent)
+        }
+        cv_menu_faq.setOnClickListener {
+            val intent = Intent(this, FaqActivity::class.java)
             startActivity(intent)
         }
     }

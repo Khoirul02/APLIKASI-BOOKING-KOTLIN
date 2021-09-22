@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_list_pertanyaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#fc035a"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/deskripsi" />
+        <TextView
+            android:id="@+id/tv_list_jawaban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_list_pertanyaan"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#4A9586"
+            tools:text="Diva Kos selalu berupaya untuk menjaga keamanan dan kenyamanan pengguna selama bertransaksi di aplikasi ini .Lewat sistem Booking Langsung di Aplikasi Diva Kos, Anda dapat menikmati kemudahan transaksi cashless dan pencatatan pembayaran yang bisa diakses kapan saja. Dengan menggunakan akun Anda sebagai saat bertransaksi, kami dapat menindaklanjuti apabila terjadi indikasi pelanggaran, kecurangan (fraud), pencurian maupun penipuan, tindakan kriminal, dan transaksi yang mencurigakan."
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

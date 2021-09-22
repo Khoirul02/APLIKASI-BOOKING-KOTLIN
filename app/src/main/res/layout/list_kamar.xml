@@ -131,7 +131,7 @@
             android:textColor="#fc035a"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:text="@string/deskripsi" />
+            android:text="Deskripsi" />
         <TextView
             android:id="@+id/tv_list_deskripsi_kamar"
             android:layout_width="match_parent"
