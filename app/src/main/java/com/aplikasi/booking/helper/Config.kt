@@ -16,7 +16,7 @@ object Config {
     const val FOTO_AKUN = "FOTO_AKUN"
     const val RULE_AKUN = "RULE_AKUN"
     //base_url
-    const val BASE_URL = "http://192.168.100.239/BACKEND-DIVA-KOST/"
-    const val BASE_URL_PHOTO = "http://192.168.100.239/BACKEND-DIVA-KOST/images/"
+    const val BASE_URL = "https://divakos.myalopedia.com/"
+    const val BASE_URL_PHOTO = "https://divakos.myalopedia.com/images/"
 
 }

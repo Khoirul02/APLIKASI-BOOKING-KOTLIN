@@ -46,7 +46,11 @@ class BookingFragment : Fragment() {
                     response: Response<BookingResponse>?
                 ) {
                     if (response!!.isSuccessful){
-                        showData( response.body())
+                        if (response.body().data === null){
+                            Toast.makeText(activity, "", Toast.LENGTH_LONG).show()
+                        }else{
+                            showData( response.body())
+                        }
                     }else{
                         Toast.makeText(activity, "Response Tidak Ada", Toast.LENGTH_LONG).show()
                     }

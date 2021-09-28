@@ -55,7 +55,11 @@ class PenggunaFragment : Fragment() {
                     response: Response<PenggunaResponse>?
                 ) {
                     if(response!!.isSuccessful){
-                        showData(response.body())
+                        if (response.body().data === null){
+                            Toast.makeText(activity, "", Toast.LENGTH_LONG).show()
+                        }else{
+                            showData(response.body())
+                        }
                     }
                 }
 
